@@ -3,12 +3,14 @@
 int gcd(int a, int b) {
     int div;
     int c = a - b;
-    if (a == b)
+    if (a == b) {
         return a;
+    }
     if (c < 0) {
         c = -c;
         div = gcd(a, c);
-    } else
+    } else {
         div = gcd(b, c);
+    }
     return div;
 }
