@@ -2,16 +2,19 @@
 
 int gcd(int a, int b) 
 {
-    while (a != b) 
+    int div;
+    int c = a - b;
+
+    if (a == b)
+        return a;
+
+    if (c < 0)
     {
-        if (a > b) 
-        {
-          a = a - b;
-        }
-        else 
-        {
-          b = b - a;
-        }
+        c = -c;
+        div = gcd(a, c);
     }
-    return a;
+    else
+        div = gcd(b, c);
+    
+    return div;
 }
