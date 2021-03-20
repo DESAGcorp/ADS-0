@@ -8,8 +8,7 @@ int gcd(int a, int b) {
     if (c < 0) {
         c = -c;
         div = gcd(a, c);
-    }
-    else
+    } else
         div = gcd(b, c);
     return div;
 }
